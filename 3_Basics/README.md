@@ -96,3 +96,55 @@ default theme:
 ```bash
 sudo apt-get install qt5-style-kvantum
 ```
+
+
+## Theme
+My personal config now uses Gruvbox as default theme for GTK and Qt apps, so...
+1. Install [Gruvbox-GTK](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
+2. Install [Gruvbox-Kvantum](https://github.com/thefallnn/Gruvbox-Kvantum/tree/gruvbox-fallnn)
+3. For the icons, personally I like [tela icon theme](https://github.com/vinceliuice/Tela-icon-theme)
+
+## Images
+Personally, I like [Viewnior](https://github.com/hellosiyan/Viewnior):
+```bash
+sudo apt-get install viewnior
+```
+
+## Documents
+Personally, I like [Zathura](https://github.com/pwmt/zathura):
+```bash
+sudo apt-get install zathura
+```
+
+
+## Video and audio
+You should give a try to 
+[mpv](https://github.com/mpv-player/mpv)
+
+```bash
+sudo pacman -S mpv
+```
+
+## Screenshots
+Configs for this already exist in my dotfiles, but you have to install some things to make them work:
+```bash
+sudo pacman -S maim xdotool xclip
+```
+
+## Text Editor
+Personally, I'm in love with [Neovim](https://neovim.io/), and I have some configs for it, you can check them here:
+[pzeadrian's nvim](https://github.com/pzeadrian/configNeovim_lua)
+PS: For use this, you will need to manually install Neovim .deb, so go [here](https://github.com/neovim/neovim)
+
+## Network
+For managing networks, I use [Network Manager](https://wiki.archlinux.org/title/NetworkManager) with the terminal command nmcli or nm-applet
+### Trick - Slow WiFi
+```
+sudo nano /etc/modprobe.d/iwlwifi.conf
+```
+- Now copy that inside the file:
+```
+options iwlwifi 11n_disable=8
+```
+
+A final reboot, and it will be done..
