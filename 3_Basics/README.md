@@ -8,7 +8,7 @@ sudo apt-get install udiskie mtpfs gvfs jmtpfs
 ## Touchpad
 If you are using a laptop, I recommend you to do this for have all gestures working correctly.
 ```bash
-sudo apt-get install xf86-input-libinput
+sudo apt-get install xserver-xorg-input-libinput
 cd /etc/X11/xorg.conf.d
 sudo nano 30-touchpad.conf
 ```
