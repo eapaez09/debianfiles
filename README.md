@@ -25,7 +25,7 @@
   And copy your wifi device name. It isn't "lo".
   Run
   ```bash
-  ip link set dev %Your device name% up
+  ip link set %Your device name% up
   ```
   And
   ```bash
