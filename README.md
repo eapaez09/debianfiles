@@ -3,6 +3,6 @@
 
 - Now, let's see how to install and configure it to leave as my Arch dotfiles, or at least as similar as possible:
 
-1. [Installation]
-2. [Build Desktop]
-3. [Basics]
+1. [Installation](https://github.com/pzeadrian/debian/tree/main/1_Install)
+2. [Build Desktop](https://github.com/pzeadrian/debian/tree/main/2_GUI)
+3. [Basics](https://github.com/pzeadrian/debian/tree/main/3_Basics)
