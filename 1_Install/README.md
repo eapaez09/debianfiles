@@ -31,7 +31,7 @@ wpa_passphrase your-ESSID your-wifi-passphrase | tee -a /etc/wpa_supplicant/wpa_
 ```
 After that,
 ```bash
-wpa_supplicant -B -c /etc/wpa_supplicant.conf -i %Your device name%
+wpa_supplicant -B -c /etc/wpa_supplicant/wpa_supplicant.conf -i %Your device name%
 ```
 Then,
 ```bash
