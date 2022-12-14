@@ -5,7 +5,7 @@ git pull
 
 cd
 
-if [ $(hostname) == "hp" ] 
+if [ "$hostname" == "hp" ] 
 then
     cp $HOME/.xprofile $HOME/Documents/debian/2_GUI/1920x1080/
     mv $HOME/Documents/debian/2_GUI/1920x1080/.xprofile $HOME/Documents/debian/2_GUI/1920x1080/xprofile
