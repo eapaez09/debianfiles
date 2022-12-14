@@ -5,10 +5,10 @@ git pull
 
 cd
 
-if [[ $(hostnamectl hostname) == "hp" ]]; then
+if [[ $(hostname) == "hp" ]]; then
     cp $HOME/.xprofile $HOME/Documents/debian/2_GUI/1920x1080/xprofile
 
-elif [[ $(hostnamectl hostname) == "asus" ]]; then
+elif [[ $(hostname) == "asus" ]]; then
     cp $HOME/.xprofile $HOME/Documents/debian/2_GUI/1366x768/xprofile
 else
     echo "Skipping sync, unknown hostname"
