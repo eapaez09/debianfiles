@@ -1,0 +1,119 @@
+@import "font"
+@import "colors.rasi"
+
+window {
+    background-color:               @BG;
+    text-color:                     @FG;
+    border:                         1px;
+    border-color:                   @BDR;
+    border-radius:                  22px;
+    width:                          500px;
+    location:                       center;
+    anchor:                         center;
+    x-offset:                       0;
+    y-offset:                       0;
+}
+
+prompt {
+    enabled: 			            true;
+    padding: 			            10px;
+    background-color: 		        @BG;
+    text-color: 		            @IMG;
+    margin:                         0px;
+}
+
+inputbar {
+    background-color:               @BG;
+}
+
+entry {
+    background-color:               @BG;
+    text-color:                     @FG;
+    expand:                         true;
+    horizontal-align:               0;
+    blink:                          true;
+    border:                  		1px 1px 1px 1px;
+    border-color:                  	@BDR;
+    border-radius:                  0px;
+    padding:                        10px 15px 10px 15px;
+    margin:                         0px;
+    position:                       center;
+}
+
+case-indicator {
+    background-color:               @BG;
+    text-color:                     @FG;
+    spacing:                        0;
+}
+
+listview {
+    background-color:               @BG;
+    columns:                        3;
+    lines:							5;
+    spacing:                        5px;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @BG;
+    children:                       [ inputbar, listview ];
+    spacing:                       	20px;
+    padding:                        20px;
+}
+
+element {
+    background-color:               @BG;
+    text-color:                     @FG;
+    orientation:                    horizontal;
+    border-radius:                  10px;
+    padding:                        10px 10px 10px 10px;
+}
+
+element-icon {
+    background-color: 				inherit;
+    text-color:       				inherit;
+    size:                           0px;
+    border:                         0px;
+}
+
+element-text {
+    background-color: 				inherit;
+    text-color:       				inherit;
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0.5;
+    margin:                         2px 0px 2px 2px;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:               @UGT;
+    text-color:                     @FG;
+    border-radius:                  9px;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:               @BGA;
+    text-color:                     @FG;
+}
+
+element selected {
+    background-color:               @BGA;
+    text-color:                     @SEL;
+    border:                  		0px 0px 0px 0px;
+    border-radius:                  10px;
+    border-color:                  	@BDR;
+}
+
+element selected.urgent {
+    background-color:               @UGT;
+    text-color:                     @FG;
+}
+
+element selected.active {
+    background-color:               @BGA;
+    color:                          @FG;
+}
