@@ -2,3 +2,21 @@ systemctl --user import-environment DISPLAY XAUTHORITY &
 
 # Compositor
 picom &
+
+# Bluetooth
+blueman-applet &
+
+# NetworkManager in Systray
+nm-applet &
+
+# Battery
+xfce4-power-manager &
+
+# Wallpaper
+feh --bg-fill $HOME/.config/xorg-xinit/wall.* &
+
+# Some kind of security stuff
+lxsession &
+
+# Qt5 Apps
+export QT_STYLE_OVERRIDE=kvantum
