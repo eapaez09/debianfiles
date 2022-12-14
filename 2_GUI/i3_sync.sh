@@ -5,12 +5,12 @@ git pull
 
 cd
 
-if [ $(hostname) -eq "hp" ] 
+if [ $(hostname) == "hp" ] 
 then
     cp $HOME/.xprofile $HOME/Documents/debian/2_GUI/1920x1080/
     mv $HOME/Documents/debian/2_GUI/1920x1080/.xprofile $HOME/Documents/debian/2_GUI/1920x1080/xprofile
 
-elif [ $(hostname) -eq "asus" ]
+elif [ $(hostname) == "asus" ]
 then
     cp $HOME/.xprofile $HOME/Documents/debian/2_GUI/1366x768/
     mv $HOME/Documents/debian/2_GUI/1366x768/.xprofile $HOME/Documents/debian/2_GUI/1366x768/xprofile
