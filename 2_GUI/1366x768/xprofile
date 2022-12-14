@@ -16,7 +16,7 @@ xfce4-power-manager &
 feh --bg-fill $HOME/.config/xorg-xinit/wall.* &
 
 # Some kind of security stuff
-lxsession &
+lxpolkit &
 
 # Qt5 Apps
 export QT_STYLE_OVERRIDE=kvantum
