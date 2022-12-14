@@ -10,9 +10,6 @@ configuration {
 @import "font.rasi"
 @import "colors.rasi"
 
-/* Line Responsible For Button Layouts */
-/* BUTTON = FALSE */
-
 window {
     transparency:                   "real";
     background-color:               @BG;
@@ -20,7 +17,7 @@ window {
     border:                         1px;
     border-color:                   @BDR;
     border-radius:                  22px;
-    width:                          350px;
+    width:                          320px;
     anchor:                         center;
     x-offset:                       0;
     y-offset:                       0;
@@ -29,7 +26,7 @@ window {
 prompt {
     enabled: 			            false;
     margin: 			            0px 0px 0px 0px;
-    padding: 			            15px 0px 0px 11px;
+    padding: 			            15px 0px 0px 15px;
     background-color: 		        @BG;
     text-color: 		            @FG;
     border:                  	    1px 1px 1px 1px;
@@ -43,22 +40,8 @@ textbox-prompt-colon {
     border-radius:                  100%;
     background-color:               @BG;
     text-color:                     @FG;
-    padding:                        10px 15px 10px 15px;
+    padding:                        10px 0px 10px 0px;
     font:			                "SpaceMono Nerd Font 18";
-}
-
-entry {
-    background-color:               @BG;
-    text-color:                     @FG;
-    placeholder-color:              @FG;
-    expand:                         true;
-    horizontal-align:               0;
-    placeholder:                    "Search...";
-    blink:                          true;
-    border:                  	    1px 1px 1px 1px;
-    border-color:                   @BDR;
-    border-radius:                  10px;
-    padding:                        10px;
 }
 
 inputbar {
@@ -85,7 +68,7 @@ listview {
     background-color:               @BG;
     columns:                        1;
     lines:							4;
-    spacing:                        4px;
+    spacing:                        10px;
     cycle:                          true;
     dynamic:                        true;
     layout:                         vertical;

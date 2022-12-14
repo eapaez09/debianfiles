@@ -1,12 +1,3 @@
-configuration {
-    show-icons:                     true;
-    display-drun: 		            "::";
-    drun-display-format:            "{icon} {name}";
-    disable-history:                false;
-    click-to-exit: 		            true;
-    location:                       0;
-}
-
 @import "font.rasi"
 @import "colors.rasi"
 
@@ -17,7 +8,7 @@ window {
     border:                         1px;
     border-color:                   @BDR;
     border-radius:                  22px;
-    width:                          800px;
+    width:                          500px;
     height:                         565px;
     anchor:                         center;
     x-offset:                       0;
@@ -31,15 +22,8 @@ prompt {
     text-color: 		            @IMG;
 }
 
-textbox-prompt-colon {
-    expand: 			            false;
-    str: 			                "";
-    border-radius:                  100%;
-    background-color:               @BDR;
-    text-color:                     @FG;
-    padding:                        10px 25px 10px 20px;
-    font:			                "SpaceMono Nerd Font 15";
-    margin:                         0px;
+inputbar {
+    background-color:               @BG;
 }
 
 entry {
@@ -52,21 +36,8 @@ entry {
     blink:                          true;
     border:                  	    1px 1px 1px 1px;
     border-color:                   @BDR;
-    border-radius:                  10px;
-    padding:                        10px;
-}
-
-inputbar {
-	children: 		                [ textbox-prompt-colon, prompt, entry ];
-    background-color:               @BG;
-    text-color:                     @FG;
-    expand:                         false;
-    border:                  	    0px 0px 0px 0px;
     border-radius:                  0px;
-    border-color:                   @BDR;
-    margin:                         0px 0px 0px 0px;
-    padding:                        0px;
-    position:                       center;
+    padding:                        10px 15px 10px 15px;
 }
 
 case-indicator {
@@ -75,11 +46,10 @@ case-indicator {
     spacing:                        0;
 }
 
-
 listview {
     background-color:               @BG;
-    columns:                        2;
-    lines:			                5;
+    columns:                        1;
+    lines:			                6;
     spacing:                        10px;
     cycle:                          false;
     dynamic:                        true;

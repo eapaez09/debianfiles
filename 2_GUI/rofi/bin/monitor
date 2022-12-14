@@ -6,15 +6,15 @@ geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
 # Buttons
 layout=`cat $HOME/.config/rofi/config/screenshot.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
 if [[ "$layout" == "TRUE" ]]; then
-	pconly=""
-	project=""
-	dual=""
-	monitoronly=""
+	pconly=" "
+	project=" "
+	dual=" "
+	monitoronly=" "
 else
-	pconly=" PC Screen Only"
-	project=" Duplicate"
-	dual=" Extend"
-	monitoronly=" Second Screen Only"
+	pconly="  PC Screen Only"
+	project="  Duplicate"
+	dual="  Extend"
+	monitoronly="  Second Screen Only"
 fi
 
 # change xrandr settings
