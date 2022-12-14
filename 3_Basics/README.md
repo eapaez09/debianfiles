@@ -1,7 +1,7 @@
 ## Removable Media
 For get the computer recognizing USB, Android phones and even NTFS disks, I recommend:
 ```bash
-sudo apt-get install udiskie mtpfs gvfs jmtpfs
+sudo apt-get install udiskie gvfs jmtpfs
 ```
 
 
