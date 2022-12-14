@@ -14,10 +14,11 @@ else
     echo "Skipping sync, unknown hostname"
 fi
 
-cp -R $HOME/.config/fish/ $HOME/Documents/debian/2_GUI/general/
-cp -R $HOME/.config/picom/ $HOME/Documents/debian/2_GUI/general/
-cp -R $HOME/.config/xorg-xinit/ $HOME/Documents/debian/2_GUI/general/
-cp -R $HOME/.config/rofi/ $HOME/Documents/debian/2_GUI/general/
+cp -R $HOME/.config/i3 $HOME/Documents/debian/2_GUI/general/
+cp -R $HOME/.config/fish $HOME/Documents/debian/2_GUI/general/
+cp -R $HOME/.config/picom $HOME/Documents/debian/2_GUI/general/
+cp -R $HOME/.config/xorg-xinit $HOME/Documents/debian/2_GUI/general/
+cp -R $HOME/.config/rofi $HOME/Documents/debian/2_GUI/general/
 cp $HOME/i3_sync.sh $HOME/Documents/debian/2_GUI/
 
 
