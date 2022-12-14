@@ -1,0 +1,4 @@
+systemctl --user import-environment DISPLAY XAUTHORITY &
+
+# Compositor
+picom &
