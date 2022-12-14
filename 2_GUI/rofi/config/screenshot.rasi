@@ -41,7 +41,7 @@ textbox-prompt-colon {
     background-color:               @BG;
     text-color:                     @FG;
     padding:                        10px 0px 10px 0px;
-    font:			                "SpaceMono Nerd Font 18";
+    font:			                "SpaceMono Nerd Font Mono 18";
 }
 
 inputbar {
