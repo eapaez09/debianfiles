@@ -11,7 +11,7 @@ rm -R $HOME/.config/fish/ $HOME/.config/picom/
 rm -R $HOME/.config/alacritty/ $HOME/.config/i3/ $HOME/.config/rofi/ $HOME/.config/polybar/
 
 rm $HOME/.xinitrc
-rm $HOME/.xprofile
+# rm $HOME/.xprofile
 
 
 # Global dotfiles, configured even if you didn't specify the PC
@@ -23,7 +23,7 @@ cp -R $HOME/Documents/debianfiles/configFiles/global/polybar/ $HOME/.config/
 cp -R $HOME/Documents/debianfiles/configFiles/global/rofi/ $HOME/.config/
 cp -R $HOME/Documents/debianfiles/configFiles/global/alacritty/ $HOME/.config/
 cp $HOME/Documents/debianfiles/configFiles/global/.xinitrc $HOME/
-cp $HOME/Documents/debianfiles/configFiles/global/.xprofile $HOME/
+# cp $HOME/Documents/debianfiles/configFiles/global/.xprofile $HOME/
 
 # Pipewire
 cp -R $HOME/Documents/debianfiles/configFiles/global/pipewire/ $HOME/.config/

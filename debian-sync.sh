@@ -38,8 +38,8 @@ rm -R $HOME/Documents/debianfiles/configFiles/global/.xinitrc
 cp -R $HOME/.xinitrc $HOME/Documents/debianfiles/configFiles/global/
 #
 # xprofile
-rm -R $HOME/Documents/debianfiles/configFiles/global/.xprofile
-cp -R $HOME/.xprofile $HOME/Documents/debianfiles/configFiles/global/
+# rm -R $HOME/Documents/debianfiles/configFiles/global/.xprofile
+# cp -R $HOME/.xprofile $HOME/Documents/debianfiles/configFiles/global/
 #
 # alacritty
 rm -R $HOME/Documents/debianfiles/configFiles/global/alacritty/
