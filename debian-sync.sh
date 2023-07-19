@@ -10,10 +10,6 @@ cp -R $HOME/.config/pipewire/ $HOME/Documents/debianfiles/configFiles/global/
 ## GTK Theming settings
 # Remember that libadwaita theming for gnome apps requires an option
 #
-# GTK2
-rm -R $HOME/Documents/debianfiles/configFiles/global/.gtkrc-2.0
-cp -R $HOME/.gtkrc-2.0 $HOME/Documents/debianfiles/configFiles/global/.gtkrc-2.0
-#
 # GTK 3.0
 rm -R $HOME/Documents/debianfiles/configFiles/global/gtk-3.0
 cp -R $HOME/.config/gtk-3.0/ $HOME/Documents/debianfiles/configFiles/global/
