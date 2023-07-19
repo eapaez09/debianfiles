@@ -1,3 +1,0 @@
-You should run some commands for leave this xinitrc as the default.
--->
-ln -s $HOME/.config/xorg-xinit/xinitrc ~/.xinitrc
