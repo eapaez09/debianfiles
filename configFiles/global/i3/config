@@ -30,7 +30,7 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh
 
 # Keyboard Layouts
-exec_always --no-startup-id setxkbmap -layout us,latam
+exec_always --no-startup-id setxkbmap -layout us,es
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
