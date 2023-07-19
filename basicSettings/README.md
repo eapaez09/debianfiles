@@ -136,4 +136,10 @@ net.ipv6.conf.nic0.disable_ipv6 = 1
 net.ipv6.conf.nicN.disable_ipv6 = 1
 ```
 
+## Firefox is slow?
+Be sure yo uninstall xdg-desktop-portal...
+```
+sudo apt-get remove xdg-desktop-portal
+```
+
 A final reboot, and it will be done..
