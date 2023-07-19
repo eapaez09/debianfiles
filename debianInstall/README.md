@@ -18,28 +18,35 @@ systemctl start wpa_supplicant
 ```
 Then, run
 ```bash
-ip a
+wpa_cli
 ```
-And copy your wifi device name. It isn't "lo".
-Run
+And, for most Home Networks:
 ```bash
-ip link set %Your device name% up
+> add_network
+0
+> set_network 0 ssid "myhomenetwork"
+OK
+> set_network 0 psk "mypassword"
+OK
+> set_network 0 key_mgmt WPA-PSK
+OK
+> enable_network 0
+OK
 ```
-And,
+Or, for enterprise networks
 ```bash
-wpa_passphrase your-ESSID your-wifi-passphrase | tee -a /etc/wpa_supplicant/wpa_supplicant.conf
-```
-After that,
-```bash
-wpa_supplicant -B -c /etc/wpa_supplicant/wpa_supplicant.conf -i %Your device name%
-```
-Then,
-```bash
-dhclient %Your device name%
-```
-Now your wireless interface has a private IP address, which can be shown with
-```bash
-ip addr show %Your device name%
+> add_network
+0
+> set_network 0 ssid "eduroam"
+OK
+> set_network 0 identity "myname@example.com"
+OK
+> set_network 0 password "mypassword"
+OK
+> set_network 0 key_mgmt WPA-EAP
+OK
+> enable_network 0
+OK
 ```
 Nice.. You are connected to internet via Wifi.
 
