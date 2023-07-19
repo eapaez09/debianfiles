@@ -1,7 +1,7 @@
 ## Removable Media
 For get the computer recognizing USB, Android phones and even NTFS disks, I recommend:
 ```bash
-sudo apt-get install udiskie gvfs jmtpfs
+sudo apt-get install udiskie gvfs jmtpfs curl
 ```
 
 
@@ -25,9 +25,9 @@ EndSection
 
 
 ## Audio
-For this, I recommend you to use pulseaudio, so you have to install two packages: Pulseaudio and Pavucontrol, for a graphical GUI
+For this, I recommend you to use pipewire and pavucontrol, for a graphical GUI
 ```bash
-sudo apt-get install pulseaudio pavucontrol
+sudo apt-get install pipewire pipewire-alsa pipewire-jack pipewire-pulse wireplumber pavucontrol
 ```
 
 ## Bluetooth
@@ -54,17 +54,11 @@ sudo systemctl start bluetooth.service
 sudo systemctl enable bluetooth.service
 ```
 
-If you already installed pulseaudio, you can do something for see bluetooth volume in pavucontrol
-```bash
-sudo apt-get install pulseaudio-module-bluetooth
-```
-
-
 ## File Managing
 ### - GUI
 I recommend you to use [pcmanfm](https://wiki.archlinux.org/title/PCManFM) for have a GUI and file-roller for managing compressed files in pcmanfm
 ```bash
-sudo apt-get install pcmanfm file-roller
+sudo pacman -S thunar thunar-archive-plugin ark
 ```
 
 ### - Terminal
@@ -74,7 +68,7 @@ sudo apt-get install ranger
 ```
 
 ## Trash
-With *pcmanfm* you can open the trash clicking on the left panel, but on the command
+With *thunar* you can open the trash clicking on the left panel, but on the command
 line you can use:
 
 ```bash
@@ -84,7 +78,7 @@ ls ~/.local/share/Trash/files
 ## GTK Theming
 For GTK themes, I recommend you to use [lxappearance](https://github.com/lxde/lxappearance)
 ```bash
-sudo pacman -S gtk-engine-murrine gtk-engines lxappearance
+sudo apt-get install gtk2-engines-murrine gtk2-engines lxappearance
 ```
 
 ## Qt Theming
@@ -97,54 +91,49 @@ default theme:
 sudo apt-get install qt5-style-kvantum
 ```
 
-
 ## Theme
 My personal config now uses Gruvbox as default theme for GTK and Qt apps, so...
-1. Install [Gruvbox-GTK](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
-2. Install [Gruvbox-Kvantum](https://github.com/thefallnn/Gruvbox-Kvantum/tree/gruvbox-fallnn)
-3. For the icons, personally I like [tela icon theme](https://github.com/vinceliuice/Tela-icon-theme)
-
-## Images
-Personally, I like [Viewnior](https://github.com/hellosiyan/Viewnior):
-```bash
-sudo apt-get install viewnior
-```
-
-## Documents
-Personally, I like [Zathura](https://github.com/pwmt/zathura):
-```bash
-sudo apt-get install zathura
-```
-
+1. Install [adw-gtk3](https://github.com/lassekongo83/adw-gtk3)
+2. Install [Libadwaita-Kvantum](https://github.com/GabePoel/KvLibadwaita)
+3. For the icons, personally I like [Tela icon theme](https://github.com/vinceliuice/Tela-icon-theme)
 
 ## Video and audio
 You should give a try to 
 [mpv](https://github.com/mpv-player/mpv)
 
 ```bash
-sudo pacman -S mpv
+sudo papt-get install mpv
 ```
 
 ## Screenshots
 Configs for this already exist in my dotfiles, but you have to install some things to make them work:
 ```bash
-sudo pacman -S maim xdotool xclip
+sudo apt-get install maim xdotool xclip
 ```
-
 ## Text Editor
 Personally, I'm in love with [Neovim](https://neovim.io/), and I have some configs for it, you can check them here:
-[pzeadrian's nvim](https://github.com/pzeadrian/configNeovim_lua)
-PS: For use this, you will need to manually install Neovim .deb, so go [here](https://github.com/neovim/neovim)
+[pzeadrian's nvim](https://github.com/pzeadrian/configNeovim)
 
 ## Network
 For managing networks, I use [Network Manager](https://wiki.archlinux.org/title/NetworkManager) with the terminal command nmcli or nm-applet
 ### Trick - Slow WiFi
-```
+```bash
 sudo nano /etc/modprobe.d/iwlwifi.conf
 ```
 - Now copy that inside the file:
-```
+```bash
 options iwlwifi 11n_disable=8
+```
+Then,
+```bash
+sudo nano /etc/sysctl.d/40-ipv6.conf
+```
+And paste that,
+```bash
+# Disable IPv6
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.nic0.disable_ipv6 = 1
+net.ipv6.conf.nicN.disable_ipv6 = 1
 ```
 
 A final reboot, and it will be done..
