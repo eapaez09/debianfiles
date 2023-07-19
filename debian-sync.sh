@@ -49,6 +49,13 @@ cp -R $HOME/.config/alacritty/ $HOME/Documents/debianfiles/configFiles/global/
 rm -R $HOME/Documents/debianfiles/configFiles/global/rofi/
 cp -R $HOME/.config/rofi/ $HOME/Documents/debianfiles/configFiles/global/
 #
+# i3
+rm -R $HOME/Documents/debianfiles/configFiles/global/i3/
+cp -R $HOME/.config/i3/ $HOME/Documents/debianfiles/configFiles/global/
+#
+# polybar
+rm -R $HOME/Documents/debianfiles/configFiles/global/polybar/
+cp -R $HOME/.config/polybar/ $HOME/Documents/debianfiles/configFiles/global/
 
 cd $HOME/Documents/debianfiles/
 git add -A
