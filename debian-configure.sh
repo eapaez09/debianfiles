@@ -37,11 +37,11 @@ cp -R $HOME/Documents/debianfiles/configFiles/global/gtk-3.0/ $HOME/.config/
 cp -R $HOME/Documents/debianfiles/configFiles/global/gtk-4.0/ $HOME/.config/
 
 # Fonts
-if [[ -d "$HOME/.local/share/fonts/Ubuntu" ]]; then
+if [ -d "$HOME/.local/share/fonts/Ubuntu" ]; then
     echo "Fonts already installed." 
 else
     echo "Error: Fonts not installed... Installing right now..."
-    if [[ -d "$HOME/.local/share/fonts/" ]]; then
+    if [ -d "$HOME/.local/share/fonts/" ]; then
         echo "Fonts directory already exists..." 
         cp -R $HOME/Documents/debianfiles/configFiles/global/fonts/* $HOME/.local/share/fonts/
         echo "Fonts Installed succesfully."
